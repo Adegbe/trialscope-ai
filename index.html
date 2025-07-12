@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrialScope AI - Clinical Trial Analysis Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-microscope"></i>
+                    <h1>TrialScope AI</h1>
+                </div>
+                <p class="tagline">AI-Powered Clinical Trial Analysis & Drug Comparison</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="search-section">
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="query-input" placeholder="Enter your clinical trial query (e.g., 'Compare osimertinib vs SOC in NSCLC trials')" class="search-input">
+                        <button id="search-btn" class="search-btn">
+                            <i class="fas fa-search"></i>
+                            Analyze
+                        </button>
+                    </div>
+                    <div class="example-queries">
+                        <p>Example queries:</p>
+                        <div class="query-chips">
+                            <span class="query-chip" data-query="Compare pembrolizumab vs nivolumab in melanoma trials">Compare pembrolizumab vs nivolumab in melanoma trials</span>
+                            <span class="query-chip" data-query="Analyze safety profile of CAR-T therapy in hematologic malignancies">Analyze safety profile of CAR-T therapy in hematologic malignancies</span>
+                            <span class="query-chip" data-query="Compare trastuzumab vs pertuzumab in HER2+ breast cancer">Compare trastuzumab vs pertuzumab in HER2+ breast cancer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-section" id="results-section">
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Analyzing clinical trial data...</p>
+                    <div class="loading-steps">
+                        <div class="step">
+                            <i class="fas fa-database"></i>
+                            <span>Querying ClinicalTrials.gov</span>
+                        </div>
+                        <div class="step">
+                            <i class="fas fa-book-medical"></i>
+                            <span>Searching PubMed</span>
+                        </div>
+                        <div class="step">
+                            <i class="fas fa-pills"></i>
+                            <span>Analyzing DrugBank</span>
+                        </div>
+                        <div class="step">
+                            <i class="fas fa-brain"></i>
+                            <span>AI Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="error" id="error">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p id="error-message">Unable to analyze query. Please try again.</p>
+                </div>
+
+                <div class="analysis-results" id="analysis-results">
+                    <div class="summary-section">
+                        <h2><i class="fas fa-chart-line"></i> Executive Summary</h2>
+                        <div class="summary-content" id="summary-content">
+                            <!-- Summary will be populated here -->
+                        </div>
+                    </div>
+
+                    <div class="comparison-section">
+                        <h2><i class="fas fa-balance-scale"></i> Drug Comparison</h2>
+                        <div class="comparison-table" id="comparison-table">
+                            <!-- Comparison table will be populated here -->
+                        </div>
+                    </div>
+
+                    <div class="trials-section">
+                        <h2><i class="fas fa-flask"></i> Clinical Trials Analysis</h2>
+                        <div class="trials-grid" id="trials-grid">
+                            <!-- Trials will be populated here -->
+                        </div>
+                    </div>
+
+                    <div class="safety-section">
+                        <h2><i class="fas fa-shield-alt"></i> Safety Profile</h2>
+                        <div class="safety-content" id="safety-content">
+                            <!-- Safety data will be populated here -->
+                        </div>
+                    </div>
+
+                    <div class="sources-section">
+                        <h2><i class="fas fa-link"></i> Data Sources</h2>
+                        <div class="sources-grid" id="sources-grid">
+                            <!-- Sources will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 TrialScope AI. Powered by AI-driven clinical trial analysis.</p>
+                <div class="data-sources">
+                    <span>Data Sources:</span>
+                    <a href="https://clinicaltrials.gov" target="_blank">ClinicalTrials.gov</a>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank">PubMed</a>
+                    <a href="https://go.drugbank.com" target="_blank">DrugBank</a>
+                    <a href="https://www.ebi.ac.uk/chembl" target="_blank">ChEMBL</a>
+                    <a href="https://www.fda.gov/drugs" target="_blank">FDA Drug Labels</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

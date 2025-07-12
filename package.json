@@ -1,0 +1,28 @@
+{
+  "name": "trialscope-ai",
+  "version": "1.0.0",
+  "description": "AI-powered clinical trial analysis platform",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "build": "echo 'Static site - no build required'",
+    "dev": "serve ."
+  },
+  "keywords": [
+    "clinical-trials",
+    "ai",
+    "medical",
+    "healthcare",
+    "drug-analysis",
+    "clinical-research"
+  ],
+  "author": "Adegbe",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Adegbe/trialscope-ai.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 

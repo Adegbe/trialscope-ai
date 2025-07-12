@@ -77,4 +77,7 @@ cache/
 
 # Backup files
 *.bak
-*.backup 
+*.backup
+
+# Vercel
+.vercel 
